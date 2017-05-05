@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Image Gallery Layout</title>
+<style>
+
+/*The default padding, margin, and height for the body and HTML document*/
+body, html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+/*The container that will hold the .figure*/
+.photos {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	min-width: 960px;
+	padding: 4em 0 4em 0;
+}
+
+/*The container that will hold the picture as a background*/
+.figure {
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+	width: 218px;
+	height: 225px;
+	display: inline-block;
+	margin: 0 10px 10px 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 450px;
+	transition: 0.5s;
+}
+
+/*Change the .figure background's image size on hover*/
+.figure:hover {
+	background-size: 500px;
+}
+
+/*The class indicator that will adjust the width of the .figure*/
+.adjust-width {
+	width: 450px;
+}
+
+/*The caption for the .figure*/
+.caption {
+	position: absolute;
+	top: 100px;
+	left: -50px;
+	width: 120px;
+	padding: 10px 10px 10px 50px;
+	background-color: #0099CC;
+	opacity: 0.9;
+	border-top-right-radius: 90px;
+	border-bottom-right-radius: 90px;
+	color: #fff;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	transition: 0.3s;
+}
+
+/*Change the .caption's left position on hover*/
+.figure:hover .caption {
+	left: -20px;
+}
+
+/*For the .figure with the adjusted width change the .caption's left position on hover*/
+.adjust-width:hover .caption {
+	left: 0;
+}
+</style>
+</head>
+
+<body>
+<div class="photos">
+	<a href="#" class="figure" style="background-image: url('model01.png')">
+		<span class="caption">Men's</span>
+	</a>	
+	<a href="#" class="figure adjust-width" style="background-image: url('model02.png')">
+		<span class="caption">Women's</span>
+	</a>
+	<a href="#" class="figure" style="background-image: url('model03.png')">
+		<span class="caption">New</span>
+	</a>
+	<a href="#" class="figure" style="background-image: url('model04.png')">
+		<span class="caption">Trending</span>
+	</a>
+	<a href="#" class="figure" style="background-image: url('model05.png')">
+		<span class="caption">Sale</span>
+	</a>
+	<a href="#" class="figure" style="background-image: url('model06.png')">
+		<span class="caption">Plus Size</span>
+	</a>
+	<a href="#" class="figure" style="background-image: url('model07.png')">
+		<span class="caption">Featured</span>
+	</a>
+</div>
+</body>
+
+</html>
